@@ -1,5 +1,5 @@
 import {throwErrorGraphql, throwErrorMasked} from "./resolvers/throw-error.resolver.ts";
-import {deferFastField, deferSlowField} from "./resolvers/deferAndStream.resolver.ts";
+import {alphabetStream, deferFastField, deferSlowField} from "./resolvers/deferAndStream.resolver.ts";
 import {countdown} from "./resolvers/countdown.resolver.ts";
 
 export const typeDefs = /* GraphQL */ `
@@ -21,7 +21,7 @@ export const resolvers = {
     hello: () => 'Hello Deno!',
     throwErrorGraphql,
     throwErrorMasked,
-    // alphabetStream,
+    alphabetStream,
     deferFastField,
     deferSlowField,
   },

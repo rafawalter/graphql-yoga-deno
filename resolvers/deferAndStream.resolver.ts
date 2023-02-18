@@ -1,9 +1,9 @@
-// export const alphabetStream = async () => {
-//   for (const character of ['a', 'b', 'c', 'd', 'e', 'f', 'g']) {
-//     yield character
-//     await wait(1000)
-//   }
-// }
+export async function* alphabetStream() {
+  for (const character of ['a', 'b', 'c', 'd', 'e', 'f', 'g']) {
+    yield character
+    await wait(1000)
+  }
+}
 export const deferFastField = async () => {
   await wait(100)
   return 'I am speed'
