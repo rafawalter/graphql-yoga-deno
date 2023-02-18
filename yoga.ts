@@ -1,6 +1,6 @@
 import {createSchema, createYoga} from 'https://cdn.skypack.dev/graphql-yoga?dts'
-import {ThrowErrorResolver} from "./resolvers/throw-error.resolver.ts";
 import {countdown} from "./resolvers/countdown.resolver.ts";
+import {throwErrorGraphql, throwErrorMasked} from "./resolvers/throw-error.resolver.ts";
 
 export const yoga = createYoga({
   schema: createSchema({
@@ -17,8 +17,8 @@ export const yoga = createYoga({
     resolvers: {
       Query: {
         hello: () => 'Hello Deno!',
-        throwErrorGraphql: ThrowErrorResolver.throwErrorGraphql,
-        throwErrorMasked: ThrowErrorResolver.throwErrorMasked,
+        throwErrorGraphql,
+        throwErrorMasked,
       },
       Subscription: {
         countdown,
