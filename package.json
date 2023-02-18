@@ -1,0 +1,10 @@
+{
+  "name": "yoga-deno-example",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "deno run --allow-env --allow-net index.ts",
+    "check": "deno test --allow-env --allow-net --no-check ./index.ts"
+  }
+}
