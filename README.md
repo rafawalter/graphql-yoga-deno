@@ -50,13 +50,8 @@ https://the-guild.dev/graphql/yoga-server/docs/features/defer-stream
 
 ```graphql
 {
-
+    ...on Query @defer { deferSlowField(waitFor: 6000) }
+    ...on Query @defer { deferFastField }
     hello
-    ... on Query @defer {
-        deferFastField
-    }
-    ... on Query @defer {
-        deferSlowField
-    }
 }
 ```
