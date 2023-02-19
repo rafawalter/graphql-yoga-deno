@@ -6,7 +6,7 @@ https://the-guild.dev/graphql/yoga-server/docs/integrations/integration-with-den
 
 `deno run --allow-net index.ts`
 
-- imports using cdn
+- cdn for imports, npm or not
 
 ```graphql
 {
