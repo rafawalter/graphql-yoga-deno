@@ -13,6 +13,7 @@ https://the-guild.dev/graphql/yoga-server/docs/integrations/integration-with-den
     hello
 }
 ```
+https://graphql-yoga-deno.deno.dev
 
 ## Error masking
 
@@ -26,6 +27,8 @@ https://the-guild.dev/graphql/yoga-server/docs/features/error-masking
 }
 ```
 
+https://graphql-yoga-deno.deno.dev/?query=%7B%0A++++throwErrorMasked%0A%7D
+
 ### throw GraphQLError
 
 ```graphql
@@ -33,6 +36,8 @@ https://the-guild.dev/graphql/yoga-server/docs/features/error-masking
     throwErrorGraphql
 }
 ```
+
+https://graphql-yoga-deno.deno.dev/?query=%7B%0A++++throwErrorGraphql%0A%7D
 
 ## Subscriptions
 
@@ -44,15 +49,19 @@ subscription {
 }
 ```
 
+https://graphql-yoga-deno.deno.dev/?query=subscription+%7B%0A++++countdown%28from%3A+10%29%0A%7D
+
 ## Defer and Stream
 
 https://the-guild.dev/graphql/yoga-server/docs/features/defer-stream
 
 ```graphql
 {
+    hello
     alphabetStream @stream
     ...on Query @defer { deferSlowField(waitFor: 6000) }
     ...on Query @defer { deferFastField }
-    hello
 }
 ```
+
+https://graphql-yoga-deno.deno.dev/?query=%7B%0A++++hello%0A++++alphabetStream+%40stream%0A++++...on+Query+%40defer+%7B+deferSlowField%28waitFor%3A+6000%29+%7D%0A++++...on+Query+%40defer+%7B+deferFastField+%7D%0A%7D
