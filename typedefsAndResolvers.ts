@@ -9,7 +9,8 @@ export const typeDefs = /* GraphQL */ `
         throwErrorMasked: String!
         alphabetStream: [String!]
         deferFastField: String!
-        deferSlowField(waitFor: Int! = 5000): String!
+        deferSlowField(waitFor: Int! = 5000): String!,
+        slowWithCache: String!
     }
     type Subscription {
         countdown(from: Int!): Int!
@@ -24,6 +25,7 @@ export const resolvers = {
     alphabetStream,
     deferFastField,
     deferSlowField,
+    slowWithCache: deferSlowField,
   },
   Subscription: {
     countdown,
