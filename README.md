@@ -65,3 +65,13 @@ https://the-guild.dev/graphql/yoga-server/docs/features/defer-stream
 ```
 
 https://graphql-yoga-deno.deno.dev/?query=%7B%0A++++hello%0A++++alphabetStream+%40stream%0A++++...on+Query+%40defer+%7B+deferSlowField%28waitFor%3A+6000%29+%7D%0A++++...on+Query+%40defer+%7B+deferFastField+%7D%0A%7D
+
+## Caching
+
+- Global caching
+- Session based caching
+- TTL configuration
+- Manual invalidation
+- External cache (redis)
+  https://the-guild.dev/graphql/yoga-server/docs/features/response-caching
+
